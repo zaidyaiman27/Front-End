@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Application Form</h1>
+        <p class="note">Fields marked with <span class="required">*</span> are required.</p>
+
+        <form action="#" method="post" enctype="multipart/form-data">
+
+            <fieldset>
+                <legend>A. General Information</legend>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="full-name">Proposed Insured's Full Name <span class="required">*</span></label>
+                        <input type="text" id="full-name" name="full_name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="birth-date">Birth Date <span class="required">*</span></label>
+                        <input type="date" id="birth-date" name="birth_date" required>
+                    </div>
+
+                    <div class="form-group full-width inline-group">
+                        <span class="group-label">Gender:</span>
+                        <label class="choice"><input type="radio" name="gender" value="Male"> Male</label>
+                        <label class="choice"><input type="radio" name="gender" value="Female"> Female</label>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="address">Address <span class="required">*</span></label>
+                        <textarea id="address" name="address" rows="3" required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number <span class="required">*</span></label>
+                        <input type="tel" id="phone" name="phone" placeholder="+92 300 1234567" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" placeholder="name@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cnic">ID / CNIC Number <span class="required">*</span></label>
+                        <input type="text" id="cnic" name="cnic" placeholder="42101-1234567-1" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="reference">Social Security / Reference Number</label>
+                        <input type="text" id="reference" name="reference">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="marital-status">Marital Status <span class="required">*</span></label>
+                        <select id="marital-status" name="marital_status" required>
+                            <option value="">Select status</option>
+                            <option value="Single">Single</option>
+                            <option value="Married">Married</option>
+                            <option value="Divorced">Divorced</option>
+                            <option value="Widowed">Widowed</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="occupation">Occupation <span class="required">*</span></label>
+                        <input type="text" id="occupation" name="occupation" required>
+                    </div>
+
+                    <div class="form-group full-width inline-group">
+                        <span class="group-label">Are you retired? <span class="required">*</span></span>
+                        <label class="choice"><input type="radio" name="retired" value="Yes" required> Yes</label>
+                        <label class="choice"><input type="radio" name="retired" value="No"> No</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>B. Type of Health Coverage</legend>
+
+                <div class="coverage-box">
+                    <legend>Employee Coverage</legend>
+                    <div class="radio-row">
+                        <label class="choice"><input type="radio" name="employee_coverage" value="Yes"> Yes</label>
+                        <label class="choice"><input type="radio" name="employee_coverage" value="No"> No</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="employee-plan">Employee Plan Choice</label>
+                        <select id="employee-plan" name="employee_plan">
+                            <option value="">Select plan</option>
+                            <option value="Basic">Basic</option>
+                            <option value="Standard">Standard</option>
+                            <option value="Premium">Premium</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="coverage-box">
+                    <legend>Spouse Coverage</legend>
+                    <div class="radio-row">
+                        <label class="choice"><input type="radio" name="spouse_coverage" value="Yes"> Yes</label>
+                        <label class="choice"><input type="radio" name="spouse_coverage" value="No"> No</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="spouse-plan">Spouse Plan Choice</label>
+                        <select id="spouse-plan" name="spouse_plan">
+                            <option value="">Select plan</option>
+                            <option value="Basic">Basic</option>
+                            <option value="Standard">Standard</option>
+                            <option value="Premium">Premium</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="coverage-box">
+                    <legend>Children Coverage</legend>
+                    <div class="radio-row">
+                        <label class="choice"><input type="radio" name="children_coverage" value="Yes"> Yes</label>
+                        <label class="choice"><input type="radio" name="children_coverage" value="No"> No</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="children-plan">Children Plan Choice</label>
+                        <select id="children-plan" name="children_plan">
+                            <option value="">Select plan</option>
+                            <option value="Basic">Basic</option>
+                            <option value="Standard">Standard</option>
+                            <option value="Premium">Premium</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+
+
+            <fieldset>
+                <legend>C. Spouse / Children Information</legend>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="dependent-name">Dependent Name</label>
+                        <input type="text" id="dependent-name" name="dependent_name">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dependent-id">ID / SSN</label>
+                        <input type="text" id="dependent-id" name="dependent_id">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="relationship">Relationship</label>
+                        <select id="relationship" name="relationship">
+                            <option value="">Select relationship</option>
+                            <option value="Spouse">Spouse</option>
+                            <option value="Son">Son</option>
+                            <option value="Daughter">Daughter</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dependent-birth-date">Birth Date</label>
+                        <input type="date" id="dependent-birth-date" name="dependent_birth_date">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" name="age" min="0">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dependent-gender">Gender</label>
+                        <select id="dependent-gender" name="dependent_gender">
+                            <option value="">Select gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+
+
+            <fieldset>
+                <legend>D. Policy Information</legend>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="units">Units</label>
+                        <input type="number" id="units" name="units" min="0">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="annual-premium">Annual Premium</label>
+                        <input type="number" id="annual-premium" name="annual_premium" min="0" step="0.01">
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="payment-mode">Payment Mode <span class="required">*</span></label>
+                        <select id="payment-mode" name="payment_mode" required>
+                            <option value="">Select payment mode</option>
+                            <option value="Monthly">Monthly</option>
+                            <option value="Quarterly">Quarterly</option>
+                            <option value="Half-yearly">Half-yearly</option>
+                            <option value="Yearly">Yearly</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cash-application">Cash With Application</label>
+                        <input type="number" id="cash-application" name="cash_application" min="0" step="0.01">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="monthly-premium">Planned Monthly Premium</label>
+                        <input type="number" id="monthly-premium" name="monthly_premium" min="0" step="0.01">
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>E. Required Document</legend>
+                <p class="document-note">Please attach your supporting document before submitting the application.</p>
+                <div class="form-group">
+                    <label for="document">Attach Document <span class="required">*</span></label>
+                    <input type="file" id="document" name="document" accept=".pdf,.jpg,.jpeg,.png" required>
+                    <small>Accepted formats: PDF, JPG, JPEG and PNG</small>
+                </div>
+            </fieldset>
+
+
+            <fieldset>
+                <legend>F. Declaration</legend>
+                <div class="form-group declaration-check">
+                    <label class="choice">
+                        <input type="checkbox" name="confirmation" required>
+                        I confirm that the information provided in this application is complete and accurate.
+                    </label>
+                </div>
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="applicant-signature">Applicant Full Name / Signature <span
+                                class="required">*</span></label>
+                        <input type="text" id="applicant-signature" name="applicant_signature" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="application-date">Application Date <span class="required">*</span></label>
+                        <input type="date" id="application-date" name="application_date" required>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="button-row">
+
+                <button type="reset" class="clear-button">
+                    Clear Form
+                </button>
+
+                <button type="submit" class="submit-button">
+                    Submit Application
+                </button>
+
+
+            </div>
+        </form>
+    </div>
+
+</body>
+
+</html>
